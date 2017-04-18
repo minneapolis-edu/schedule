@@ -63,7 +63,6 @@ ul.tabs li a: focus, active {
 
 <body>
 
-
 <!-- <p>Instructions: python watcher.py <i>excelfilename</i></P>
 
 <p>Or python readsc.py (check code for built in filename)</P>
@@ -85,19 +84,11 @@ ul.tabs li a: focus, active {
 
 
 
-            <li><b>Instructor : Duncan Ton,  Credits: 20.0 (Too much overload?)</b></li>
+            <li>Instructor : John Hutchinson Credits: 4.0</li>
 
 
 
-            <li>Instructor : Justin Opatrny Credits: 4.0</li>
-
-
-
-            <li><b>Instructor : Steve Frich,  Credits: 20.0 (Too much overload?)</b></li>
-
-
-
-            <li>Instructor : Maggie Mahan Credits: 3.0</li>
+            <li>Instructor : Mary Bock Credits: 2.0</li>
 
 
 
@@ -105,11 +96,11 @@ ul.tabs li a: focus, active {
 
 
 
-            <li><b>Instructor : Clara James,  Credits: 20.0 (Too much overload?)</b></li>
+            <li><b>Instructor : Duncan Ton,  Credits: 20.0 (Too much overload?)</b></li>
 
 
 
-            <li>Instructor : Cathy Pham Credits: 10.0</li>
+            <li><b>Instructor : Steve Frich,  Credits: 20.0 (Too much overload?)</b></li>
 
 
 
@@ -122,11 +113,23 @@ ul.tabs li a: focus, active {
 
 
 
-            <li>Instructor : Mary Bock Credits: 2.0</li>
+            <li><b>Instructor : Clara James,  Credits: 20.0 (Too much overload?)</b></li>
 
 
 
-            <li>Instructor : John Hutchinson Credits: 4.0</li>
+            <li>Instructor : Maggie Mahan Credits: 3.0</li>
+
+
+
+            <li>Instructor : College Hour College Hour Credits: 6.0</li>
+
+
+
+            <li>Instructor : Justin Opatrny Credits: 4.0</li>
+
+
+
+            <li>Instructor : Cathy Pham Credits: 10.0</li>
 
 
 </ul>
@@ -149,7 +152,7 @@ ul.tabs li a: focus, active {
 
 <ul class="tabs">
   <li><a href="#charts" onclick=showTab("instructors")>Instructors  </a></li>
-  <li><a href="#charts" onclick=showTab("rooms")>Rooms  </a></li>
+  <li><a href="#charts" onclick=showTab("rooms")>Rooms  <span class="conflicts">* conflicts *</span>  </a></li>
   <li><a href="#charts" onclick=showTab("days")>Days</a></li>
 
 </ul>
@@ -184,6 +187,12 @@ ul.tabs li a: focus, active {
   <h2>Schedule for each room</h2>
 
     <ul id='room_conflicts' class="conflicts">
+
+        <li>For 3010 on Thursday : Programming Logic & Desig at 12:30 - 15:30 overlaps with College Hour at 15:0 - 16:0</li>
+
+        <li>For 3030 on Thursday : Computer Forensics at 12:20 - 16:30 overlaps with College Hour at 15:0 - 16:0</li>
+
+        <li>For 3050 on Thursday : Software Dev Capstone at 12:20 - 16:30 overlaps with College Hour at 15:0 - 16:0</li>
 
     </ul>
 
@@ -227,6 +236,9 @@ ul.tabs li a: focus, active {
 
       <h3>Clara</h3>
       <div class="chart"  id="chart_Clara"></div>
+
+      <h3>College Hour</h3>
+      <div class="chart"  id="chart_College Hour"></div>
 
       <h3>Duncan</h3>
       <div class="chart"  id="chart_Duncan"></div>
