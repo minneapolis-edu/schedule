@@ -63,75 +63,63 @@ ul.tabs li a: focus, active {
 
 <body>
 
-<!-- <p>Instructions: python watcher.py <i>excelfilename</i></P>
 
-<p>Or python readsc.py (check code for built in filename)</P>
-<P>This file is report.html</p>
-
-<h3>TODO list</h3>
-
-
-<ul class="todo">
-  <li>Consider re-writing the incomprehensible mess that is the comparison code. </li>
-  <li>figure out actual list of things that shouldn't conflict in dept. meeting. Test. </li>
-  <li>A restart command for the watcher, like rs in nodemon. This might help <a href="https://docs.python.org/3.5/library/select.html">https://docs.python.org/3.5/library/select.html</a></li>
-</ul> -->
 
 
 <h2> Instructor Credit Load</h2>
 
 <ul>
 
-
-
-            <li>Instructor : John Hutchinson Credits: 4.0</li>
-
-
-
-            <li>Instructor : Mary Bock Credits: 2.0</li>
-
-
-
+      
+            
+            <li><b>Instructor : Clara James,  Credits: 20.0 (Too much overload?)</b></li>
+            
+      
+            
+            <li><b>Instructor : Staff Staff,  Credits: 25.0 (Too much overload?)</b></li>
+            
+      
+            
             <li>Instructor : Warren Sheaffer Credits: 4.0</li>
-
-
-
+            
+      
+            
+            <li>Instructor : Justin Opatrny Credits: 4.0</li>
+            
+      
+            
+            <li>Instructor : Mary Bock Credits: 2.0</li>
+            
+      
+            
             <li><b>Instructor : Duncan Ton,  Credits: 20.0 (Too much overload?)</b></li>
-
-
-
+            
+      
+            
+            <li>Instructor : Cathy Pham Credits: 10.0</li>
+            
+      
+            
+            <li>Instructor : Maggie Mahan Credits: 3.0</li>
+            
+      
+            
+            <li>Instructor : College Hour College Hour Credits: 6.0</li>
+            
+      
+            
             <li><b>Instructor : Steve Frich,  Credits: 20.0 (Too much overload?)</b></li>
-
-
-
+            
+      
+            
+            <li>Instructor : John Hutchinson Credits: 4.0</li>
+            
+      
+            
             <li><b>Instructor : Andrew Chrastek,  Credits: 19.0 (Overload)</b></li>
 
-
-
-
-            <li><b>Instructor : Staff Staff,  Credits: 25.0 (Too much overload?)</b></li>
-
-
-
-            <li><b>Instructor : Clara James,  Credits: 20.0 (Too much overload?)</b></li>
-
-
-
-            <li>Instructor : Maggie Mahan Credits: 3.0</li>
-
-
-
-            <li>Instructor : College Hour College Hour Credits: 6.0</li>
-
-
-
-            <li>Instructor : Justin Opatrny Credits: 4.0</li>
-
-
-
-            <li>Instructor : Cathy Pham Credits: 10.0</li>
-
-
+            
+      
 </ul>
 
 
@@ -142,9 +130,9 @@ ul.tabs li a: focus, active {
 
 <p class="conflicts"><i>These classes should not run at the same time</i></p>
 <ul>
-
+  
     <li class="conflicts">1310-1 and 1250-1 on M</li>
-
+  
 </ul>
 
 
@@ -162,22 +150,22 @@ ul.tabs li a: focus, active {
   <div id='days' class='tab-pane'>
 <!-- Day schedules as tabs, highlight conflicts  -->
     <h2>Schedule for each day</h2>
-
+      
         <h3>Monday</h3>
         <div class="chart" id="chart_Monday"></div>
-
+      
         <h3>Tuesday</h3>
         <div class="chart" id="chart_Tuesday"></div>
-
+      
         <h3>Wednesday</h3>
         <div class="chart" id="chart_Wednesday"></div>
-
+      
         <h3>Thursday</h3>
         <div class="chart" id="chart_Thursday"></div>
-
+      
         <h3>Friday</h3>
         <div class="chart" id="chart_Friday"></div>
-
+      
   </div>
 
 
@@ -187,34 +175,30 @@ ul.tabs li a: focus, active {
   <h2>Schedule for each room</h2>
 
     <ul id='room_conflicts' class="conflicts">
-
-        <li>For 3010 on Thursday : Programming Logic & Desig at 12:30 - 15:30 overlaps with College Hour at 15:0 - 16:0</li>
-
+      
         <li>For 3030 on Thursday : Computer Forensics at 12:20 - 16:30 overlaps with College Hour at 15:0 - 16:0</li>
-
-        <li>For 3050 on Thursday : Software Dev Capstone at 12:20 - 16:30 overlaps with College Hour at 15:0 - 16:0</li>
-
+      
     </ul>
 
-
+    
       <h3>3010</h3>
       <div class="chart"  id="chart_3010"></div>
-
+    
       <h3>3020</h3>
       <div class="chart"  id="chart_3020"></div>
-
+    
       <h3>3030</h3>
       <div class="chart"  id="chart_3030"></div>
-
+    
       <h3>3040</h3>
       <div class="chart"  id="chart_3040"></div>
-
+    
       <h3>3050</h3>
       <div class="chart"  id="chart_3050"></div>
-
+    
       <h3>3080</h3>
       <div class="chart"  id="chart_3080"></div>
-
+    
 
   </div>
 
@@ -224,46 +208,46 @@ ul.tabs li a: focus, active {
   <h2>Schedule for each instructor</h2>
 
     <ul id="instructor_conflicts" class="conflicts">
-
+      
     </ul>
 
-
+    
       <h3>Andrew</h3>
       <div class="chart"  id="chart_Andrew"></div>
-
+    
       <h3>Cathy</h3>
       <div class="chart"  id="chart_Cathy"></div>
-
+    
       <h3>Clara</h3>
       <div class="chart"  id="chart_Clara"></div>
-
+    
       <h3>College Hour</h3>
       <div class="chart"  id="chart_College Hour"></div>
-
+    
       <h3>Duncan</h3>
       <div class="chart"  id="chart_Duncan"></div>
-
+    
       <h3>John</h3>
       <div class="chart"  id="chart_John"></div>
-
+    
       <h3>Justin</h3>
       <div class="chart"  id="chart_Justin"></div>
-
+    
       <h3>Maggie</h3>
       <div class="chart"  id="chart_Maggie"></div>
-
+    
       <h3>Mary</h3>
       <div class="chart"  id="chart_Mary"></div>
-
+    
       <h3>Staff</h3>
       <div class="chart"  id="chart_Staff"></div>
-
+    
       <h3>Steve</h3>
       <div class="chart"  id="chart_Steve"></div>
-
+    
       <h3>Warren</h3>
       <div class="chart"  id="chart_Warren"></div>
-
+    
 
 </div>
 
