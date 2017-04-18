@@ -1,0 +1,293 @@
+<!-- How to do tabs?
+
+Bootstrap: http://www.w3schools.com/bootstrap/bootstrap_tabs_pills.asp -->
+
+<html>
+<head>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+  <script src="chart_generator.js"></script>
+
+
+<style>
+
+/* Style tabs */
+body {
+  font-family: sans-serif;
+  overflow: scroll;
+}
+
+.chart {
+  height : 300px;
+  width: 1200px
+}
+
+ul.tabs {
+  list-style-type: none;
+  margin: 0px;
+  padding : 0px;
+  /*overflow : hidden;*/
+  border : 1px solid #ccc;
+  background-color: #ddd;
+}
+
+ul.tabs li {
+  float: left;
+  padding : 10px;
+  border : 1px solid #333;
+}
+
+ul.tabs li a: focus, active {
+  background-color: #123456
+}
+
+.tab-pane {
+  /*display: none;*/
+  padding: 10px;
+  margin: 20px;
+  border-top: none;
+}
+
+.conflicts {
+  color:red
+}
+
+.todo {
+  color:purple;
+  font-weight: bold;
+  font-size: 10px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<p>Instructions: python watcher.py <i>excelfilename</i></P>
+
+<p>Or python readsc.py (check code for built in filename)</P>
+<P>This file is report.html</p>
+
+<h3>TODO list</h3>
+
+
+<ul class="todo">
+  <li>Consider re-writing the incomprehensible mess that is the comparison code. </li>
+  <li>figure out actual list of things that shouldn't conflict in dept. meeting. Test. </li>
+  <li>A restart command for the watcher, like rs in nodemon. This might help <a href="https://docs.python.org/3.5/library/select.html">https://docs.python.org/3.5/library/select.html</a></li>
+</ul>
+
+
+<h2> Instructor Credit Load</h2>
+
+<ul>
+
+      
+            
+            <li><b>Instructor : Duncan Ton,  Credits: 20.0 (Too much overload?)</b></li>
+            
+      
+            
+            <li>Instructor : Justin Opatrny Credits: 4.0</li>
+            
+      
+            
+            <li><b>Instructor : Steve Frich,  Credits: 20.0 (Too much overload?)</b></li>
+            
+      
+            
+            <li>Instructor : Maggie Mahan Credits: 3.0</li>
+            
+      
+            
+            <li>Instructor : Warren Sheaffer Credits: 4.0</li>
+            
+      
+            
+            <li><b>Instructor : Clara James,  Credits: 20.0 (Too much overload?)</b></li>
+            
+      
+            
+            <li>Instructor : Cathy Pham Credits: 10.0</li>
+            
+      
+            
+            <li><b>Instructor : Andrew Chrastek,  Credits: 19.0 (Overload)</b></li>
+
+            
+      
+            
+            <li><b>Instructor : Staff Staff,  Credits: 25.0 (Too much overload?)</b></li>
+            
+      
+            
+            <li>Instructor : Mary Bock Credits: 2.0</li>
+            
+      
+            
+            <li>Instructor : John Hutchinson Credits: 4.0</li>
+            
+      
+</ul>
+
+
+
+<h2>Class topic conflicts</h2>
+
+
+
+<p class="conflicts"><i>These classes should not run at the same time</i></p>
+<ul>
+  
+    <li class="conflicts">1310-1 and 1250-1 on M</li>
+  
+</ul>
+
+
+<h2 id="charts">Daily Schedules for Instructors and Rooms</h2>
+
+<ul class="tabs">
+  <li><a href="#charts" onclick=showTab("instructors")>Instructors  </a></li>
+  <li><a href="#charts" onclick=showTab("rooms")>Rooms  </a></li>
+  <li><a href="#charts" onclick=showTab("days")>Days</a></li>
+
+</ul>
+
+<div class='tab-content' id='tabHolder'>
+
+  <div id='days' class='tab-pane'>
+<!-- Day schedules as tabs, highlight conflicts  -->
+    <h2>Schedule for each day</h2>
+      
+        <h3>Monday</h3>
+        <div class="chart" id="chart_Monday"></div>
+      
+        <h3>Tuesday</h3>
+        <div class="chart" id="chart_Tuesday"></div>
+      
+        <h3>Wednesday</h3>
+        <div class="chart" id="chart_Wednesday"></div>
+      
+        <h3>Thursday</h3>
+        <div class="chart" id="chart_Thursday"></div>
+      
+        <h3>Friday</h3>
+        <div class="chart" id="chart_Friday"></div>
+      
+  </div>
+
+
+  <div id='rooms' class='tab-pane'>
+
+  <!-- room schedules as tabs, highlight conflicts  -->
+  <h2>Schedule for each room</h2>
+
+    <ul id='room_conflicts' class="conflicts">
+      
+    </ul>
+
+    
+      <h3>3010</h3>
+      <div class="chart"  id="chart_3010"></div>
+    
+      <h3>3020</h3>
+      <div class="chart"  id="chart_3020"></div>
+    
+      <h3>3030</h3>
+      <div class="chart"  id="chart_3030"></div>
+    
+      <h3>3040</h3>
+      <div class="chart"  id="chart_3040"></div>
+    
+      <h3>3050</h3>
+      <div class="chart"  id="chart_3050"></div>
+    
+      <h3>3080</h3>
+      <div class="chart"  id="chart_3080"></div>
+    
+
+  </div>
+
+<div id="instructors" class='tab-pane'>
+
+<!-- instructor schedules as tabs, highlight conflicts  -->
+  <h2>Schedule for each instructor</h2>
+
+    <ul id="instructor_conflicts" class="conflicts">
+      
+    </ul>
+
+    
+      <h3>Andrew</h3>
+      <div class="chart"  id="chart_Andrew"></div>
+    
+      <h3>Cathy</h3>
+      <div class="chart"  id="chart_Cathy"></div>
+    
+      <h3>Clara</h3>
+      <div class="chart"  id="chart_Clara"></div>
+    
+      <h3>Duncan</h3>
+      <div class="chart"  id="chart_Duncan"></div>
+    
+      <h3>John</h3>
+      <div class="chart"  id="chart_John"></div>
+    
+      <h3>Justin</h3>
+      <div class="chart"  id="chart_Justin"></div>
+    
+      <h3>Maggie</h3>
+      <div class="chart"  id="chart_Maggie"></div>
+    
+      <h3>Mary</h3>
+      <div class="chart"  id="chart_Mary"></div>
+    
+      <h3>Staff</h3>
+      <div class="chart"  id="chart_Staff"></div>
+    
+      <h3>Steve</h3>
+      <div class="chart"  id="chart_Steve"></div>
+    
+      <h3>Warren</h3>
+      <div class="chart"  id="chart_Warren"></div>
+    
+
+</div>
+
+
+</div>
+
+
+<script>
+    //tabs
+
+//     window.onload = function(){
+//       showTab("instructors");
+//       showTab("rooms");
+//       showTab("days");
+//
+//     };
+//
+// /* tab-pane elements are display : none.  Script needs to change that for selected pane. */
+//     function showTab(whichTab) {
+//
+//       console.log("tabs" + whichTab);
+//
+//       var allTabs = document.getElementsByClassName("tab-pane");
+//
+//       for (var t = 0 ; t < allTabs.length ; t++) {
+//           //Hide all other tabs
+//           allTabs[t].style.display="none";  // need this to display as tabs. Comment out to display all.
+//       }
+//
+//       var contents = document.getElementById(whichTab);
+//       contents.style.display = "initial";
+//
+// //        tabHolder.re
+//
+//     }
+
+</script>
+
+</body>
+</html>
