@@ -63,42 +63,46 @@ ul.tabs li a: focus, active {
 
 <body>
 
-<h1>Spring 2019</h1>
+<p>Instructions: python watcher.py <i>excelfilename</i></P>
+
+<p>Or python readsc.py (check code for built in filename)</P>
+<P>This file is report.html</p>
+
+<h3>TODO list</h3>
+
+
+<ul class="todo">
+  <li>Consider re-writing the incomprehensible mess that is the comparison code. </li>
+  <li>figure out actual list of things that shouldn't conflict in dept. meeting. Test. </li>
+  <li>A restart command for the watcher, like rs in nodemon. This might help <a href="https://docs.python.org/3.5/library/select.html">https://docs.python.org/3.5/library/select.html</a></li>
+</ul>
+
 
 <h2> Instructor Credit Load</h2>
 
 <ul>
 
-
-
-            <li><b>Instructor : None None,  Credits: 50.0 (Too much overload?)</b></li>
-
-
-
-            <li>Instructor :   None Credits: 3.0</li>
-
-
-
-            <li>Instructor : Steve None Credits: 16.0</li>
-
-
-
-            <li><b>Instructor : Clara None,  Credits: 23.0 (Too much overload?)</b></li>
-
-
-
+      
+            
+            <li><b>Instructor : Steve None,  Credits: 20.0 (Too much overload?)</b></li>
+            
+      
+            
+            <li><b>Instructor : Andy None,  Credits: 20.0 (Too much overload?)</b></li>
+            
+      
+            
             <li><b>Instructor : Duncan None,  Credits: 20.0 (Too much overload?)</b></li>
-
-
-
-            <li><b>Instructor : Andy None,  Credits: 19.0 (Overload)</b></li>
-
-
-
-
-            <li>Instructor : HOLD None Credits: 2.0</li>
-
-
+            
+      
+            
+            <li><b>Instructor : Clara None,  Credits: 22.0 (Too much overload?)</b></li>
+            
+      
+            
+            <li><b>Instructor : None None,  Credits: 49.0 (Too much overload?)</b></li>
+            
+      
 </ul>
 
 
@@ -107,14 +111,8 @@ ul.tabs li a: focus, active {
 
 
 
-<p class="conflicts"><i>These classes should not run at the same time</i></p>
-<ul>
+<p><i>There doesn't seem to be any topic conflicts</i></p>
 
-    <li class="conflicts">1310-1 and 1250-1 on M</li>
-
-    <li class="conflicts">1310-90 and 1250-90 on W</li>
-
-</ul>
 
 
 <h2 id="charts">Daily Schedules for Instructors and Rooms</h2>
@@ -131,22 +129,22 @@ ul.tabs li a: focus, active {
   <div id='days' class='tab-pane'>
 <!-- Day schedules as tabs, highlight conflicts  -->
     <h2>Schedule for each day</h2>
-
+      
         <h3>Monday</h3>
         <div class="chart" id="chart_Monday"></div>
-
+      
         <h3>Tuesday</h3>
         <div class="chart" id="chart_Tuesday"></div>
-
+      
         <h3>Wednesday</h3>
         <div class="chart" id="chart_Wednesday"></div>
-
+      
         <h3>Thursday</h3>
         <div class="chart" id="chart_Thursday"></div>
-
+      
         <h3>Friday</h3>
         <div class="chart" id="chart_Friday"></div>
-
+      
   </div>
 
 
@@ -156,28 +154,28 @@ ul.tabs li a: focus, active {
   <h2>Schedule for each room</h2>
 
     <ul id='room_conflicts' class="conflicts">
-
+      
     </ul>
 
-
+    
       <h3>3010</h3>
       <div class="chart"  id="chart_3010"></div>
-
+    
       <h3>3020</h3>
       <div class="chart"  id="chart_3020"></div>
-
+    
       <h3>3030</h3>
       <div class="chart"  id="chart_3030"></div>
-
+    
       <h3>3040</h3>
       <div class="chart"  id="chart_3040"></div>
-
+    
       <h3>3050</h3>
       <div class="chart"  id="chart_3050"></div>
-
+    
       <h3>3080</h3>
       <div class="chart"  id="chart_3080"></div>
-
+    
 
   </div>
 
@@ -187,41 +185,33 @@ ul.tabs li a: focus, active {
   <h2>Schedule for each instructor</h2>
 
     <ul id="instructor_conflicts" class="conflicts">
-
-        <li>For None on Wednesday : Preparing for IT at 12:20 - 14:30 overlaps with Systems Analysis & Design at 12:20 - 15:40</li>
-
-        <li>For None on Tuesday : Programming Logic & Desig at 17:0 - 20:0 overlaps with Internet/Intranet Securit at 17:0 - 21:10</li>
-
-        <li>For None on Monday : Microcomputer Syst Maiten at 12:20 - 16:30 overlaps with MS Windows Operating Sys at 12:45 - 15:15</li>
-
-        <li>For None on Wednesday : Microcomputer Syst Maiten at 17:0 - 21:10 overlaps with Firewall Implemen/Managem at 17:0 - 21:10</li>
-
-        <li>For None on Wednesday : Firewall Implemen/Managem at 17:0 - 21:10 overlaps with Microcomputer Syst Maiten at 17:0 - 21:10</li>
-
+      
+        <li>For None on Wednesday : MS Windows Operating Sys at 17:0 - 20:30 overlaps with Systems Analysis & Design at 17:0 - 21:10</li>
+      
+        <li>For None on Wednesday : MS Windows Operating Sys at 17:0 - 20:30 overlaps with Ethic Hack/Network Defens at 17:0 - 21:10</li>
+      
+        <li>For None on Thursday : Microcomputer Syst Maiten at 17:0 - 21:10 overlaps with SQL Server Database Desig at 17:0 - 21:10</li>
+      
+        <li>For None on Thursday : SQL Server Database Desig at 17:0 - 21:10 overlaps with Microcomputer Syst Maiten at 17:0 - 21:10</li>
+      
     </ul>
 
-
-      <h3> </h3>
-      <div class="chart"  id="chart_ "></div>
-
+    
       <h3>Andy</h3>
       <div class="chart"  id="chart_Andy"></div>
-
+    
       <h3>Clara</h3>
       <div class="chart"  id="chart_Clara"></div>
-
+    
       <h3>Duncan</h3>
       <div class="chart"  id="chart_Duncan"></div>
-
-      <h3>HOLD</h3>
-      <div class="chart"  id="chart_HOLD"></div>
-
+    
       <h3>None</h3>
       <div class="chart"  id="chart_None"></div>
-
+    
       <h3>Steve</h3>
       <div class="chart"  id="chart_Steve"></div>
-
+    
 
 </div>
 
