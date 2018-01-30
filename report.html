@@ -63,7 +63,19 @@ ul.tabs li a: focus, active {
 
 <body>
 
-<h1>Fall 2018</h1>
+<p>Instructions: python watcher.py <i>excelfilename</i></P>
+
+<p>Or python readsc.py (check code for built in filename)</P>
+<P>This file is report.html</p>
+
+<h3>TODO list</h3>
+
+
+<ul class="todo">
+  <li>Consider re-writing the incomprehensible mess that is the comparison code. </li>
+  <li>figure out actual list of things that shouldn't conflict in dept. meeting. Test. </li>
+  <li>A restart command for the watcher, like rs in nodemon. This might help <a href="https://docs.python.org/3.5/library/select.html">https://docs.python.org/3.5/library/select.html</a></li>
+</ul>
 
 
 <h2> Instructor Credit Load</h2>
@@ -72,11 +84,11 @@ ul.tabs li a: focus, active {
 
       
             
-            <li><b>Instructor : Steve None,  Credits: 20.0 (Too much overload?)</b></li>
+            <li><b>Instructor : Andy None,  Credits: 20.0 (Too much overload?)</b></li>
             
       
             
-            <li><b>Instructor : Andy None,  Credits: 20.0 (Too much overload?)</b></li>
+            <li>Instructor : Clara None Credits: 6.0</li>
             
       
             
@@ -84,11 +96,11 @@ ul.tabs li a: focus, active {
             
       
             
-            <li><b>Instructor : Clara None,  Credits: 22.0 (Too much overload?)</b></li>
+            <li><b>Instructor : Steve None,  Credits: 20.0 (Too much overload?)</b></li>
             
       
             
-            <li><b>Instructor : None None,  Credits: 49.0 (Too much overload?)</b></li>
+            <li><b>Instructor : None None,  Credits: 65.0 (Too much overload?)</b></li>
             
       
 </ul>
@@ -107,7 +119,7 @@ ul.tabs li a: focus, active {
 
 <ul class="tabs">
   <li><a href="#charts" onclick=showTab("instructors")>Instructors  <span class="conflicts">* conflicts *</span>  </a></li>
-  <li><a href="#charts" onclick=showTab("rooms")>Rooms  </a></li>
+  <li><a href="#charts" onclick=showTab("rooms")>Rooms  <span class="conflicts">* conflicts *</span>  </a></li>
   <li><a href="#charts" onclick=showTab("days")>Days</a></li>
 
 </ul>
@@ -143,6 +155,8 @@ ul.tabs li a: focus, active {
 
     <ul id='room_conflicts' class="conflicts">
       
+        <li>For 3080 on Tuesday : Data Communications at 9:45 - 11:50 overlaps with Preparing for IT at 10:10 - 11:50</li>
+      
     </ul>
 
     
@@ -173,6 +187,14 @@ ul.tabs li a: focus, active {
   <h2>Schedule for each instructor</h2>
 
     <ul id="instructor_conflicts" class="conflicts">
+      
+        <li>For None on Tuesday : Java Programming at 9:0 - 12:0 overlaps with Preparing for IT at 10:10 - 11:50</li>
+      
+        <li>For None on Tuesday : Information Tech Skills at 12:20 - 14:25 overlaps with WebClient/Server Program at 13:0 - 16:0</li>
+      
+        <li>For None on Tuesday : Software Dev. Projects at 17:0 - 19:0 overlaps with Programming Logic & Desig at 17:0 - 20:0</li>
+      
+        <li>For None on Wednesday : MS Windows Operating Sys at 12:20 - 15:30 overlaps with WebClient/Server Program at 13:0 - 16:0</li>
       
         <li>For None on Wednesday : MS Windows Operating Sys at 17:0 - 20:30 overlaps with Systems Analysis & Design at 17:0 - 21:10</li>
       
